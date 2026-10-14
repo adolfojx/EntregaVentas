@@ -1,0 +1,6 @@
+# Archivos compilados y generados (se vuelven a crear al ejecutar)
+bin/
+archivos_generados/
+reporte_vendedores.csv
+reporte_productos.csv
+.settings/

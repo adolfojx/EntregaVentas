@@ -1,0 +1,50 @@
+CONCLUSION DEL PROYECTO - GENERACION Y CLASIFICACION DE DATOS
+Autor: Adolfo Jimenez Ortiz
+Modulo: Conceptos Fundamentales de Programacion - Politecnico Grancolombiano
+Profesor: Ing. Edwin Ospina Penna
+
+1. LO APRENDIDO DURANTE EL DESARROLLO DEL PROYECTO
+- A organizar un programa en Java en clases con responsabilidades claras:
+  modelos (Producto, Vendedor), utilidades (GeneradorDatosUtil) y dos clases
+  ejecutables (GenerateInfoFiles y main).
+- A escribir y leer archivos de texto plano separados por punto y coma, y a
+  generar datos pseudoaleatorios con la clase Random de forma coherente (las
+  ventas solo usan productos que si existen).
+- A usar colecciones (List y Map) para buscar datos por llave, y a ordenar de
+  mayor a menor con Collections.sort y un Comparator.
+- A procesar una cantidad desconocida de archivos recorriendo la carpeta con
+  File.listFiles() en lugar de usar nombres fijos, y a sumar los datos cuando
+  un mismo vendedor tiene varios archivos.
+- A manejar errores con try/catch y a validar datos incoherentes (productos
+  inexistentes, cantidades negativas, lineas mal formadas) informando una
+  advertencia clara en vez de detener el programa.
+- A documentar con Javadoc, a aplicar buenas practicas (nombres descriptivos,
+  constantes en mayusculas, sangria uniforme) y a publicar el proyecto en un
+  repositorio de GitHub con instrucciones para que otra persona lo ejecute.
+
+2. POSIBLES APLICACIONES EN LA VIDA PROFESIONAL
+- Automatizar la lectura, limpieza y consolidacion de archivos planos (CSV)
+  que llegan de distintas areas o sistemas de una empresa.
+- Generar datos de prueba para validar software antes de usar datos reales.
+- Construir reportes ordenados (ventas por vendedor o producto) que apoyen la
+  toma de decisiones comerciales.
+- Aplicar el control de versiones con Git/GitHub y la documentacion del codigo
+  en cualquier equipo de desarrollo, de modo que el trabajo sea mantenible.
+- Reutilizar el razonamiento de dividir un problema grande en partes pequenas,
+  probar cada una y manejar los errores de forma ordenada.
+
+3. DIFICULTADES PRESENTADAS DURANTE EL DESARROLLO
+- Una inconsistencia de tipos: el numero de documento del vendedor se guardaba
+  como String pero la firma exigida createSalesMenFile(int, String, long)
+  esperaba un long. Se corrigio usando long en toda la cadena.
+- No conocer de antemano cuantos archivos de ventas existen, lo que obligo a
+  recorrer la carpeta y filtrar por el patron del nombre.
+- Mantener la compatibilidad con Java 8, por lo que el ordenamiento se escribio
+  con clases anonimas y no con expresiones lambda.
+- Cumplir la condicion de tener solo dos clases con metodo main y que ninguna
+  pida datos al usuario, repartiendo bien las responsabilidades.
+- Validar datos incoherentes sin que el programa se detuviera, y comprobar
+  los resultados con pruebas manuales ya que los datos cambian en cada
+  ejecucion por ser pseudoaleatorios.
+- Entender los pasos de GitHub y de la ejecucion del programa para alguien sin
+  experiencia previa, lo que exigio documentarlos paso a paso.
